@@ -1,20 +1,17 @@
 var React = require('react');
 var GetLastName = React.createClass({
   handleChange: function(event) {
-    this.setState({value: event.target.value});
-  },
-  logLastName: function() {
-    console.log(this.state.value);
+    this.props.changeCallBack(this.props.field, event.target.value);
   },
   render: function() {
     return (
       <div>
        <input
         type="text"
-        placeholder="enter last name"
+        placeholder={this.props.placeholder}
         onChange={this.handleChange}
+        value={this.props.value}
        />
-       <button onClick={this.logLastName}>Log Last Name</button>
       </div>
     )
   }

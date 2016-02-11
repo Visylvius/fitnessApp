@@ -3,6 +3,7 @@
   "main": "server.js",
   "node": "~5.5.0",
   "dependencies": {
+    "axios": "^0.9.1",
     "babel": "^6.5.1",
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
